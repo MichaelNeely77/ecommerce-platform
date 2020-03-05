@@ -42,16 +42,16 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        $Product = new Product;
+        $product = new Product;
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
         $product->stock = $request->stock;
-        $product->discount = $reqiest->discount;
+        $product->discount = $request->discount;
 
         $product->save;
 
-        return $response([
+        return response([
             'data' => new ProductResource($product)
         ],201);
     }

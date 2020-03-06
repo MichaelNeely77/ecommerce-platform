@@ -49,7 +49,7 @@ class ProductController extends Controller
         $product->stock = $request->stock;
         $product->discount = $request->discount;
 
-        $product->save;
+        $product->save();
 
         return response([
             'data' => new ProductResource($product)

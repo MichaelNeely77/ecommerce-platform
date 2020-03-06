@@ -44,7 +44,7 @@ class ProductController extends Controller
     {
         $product = new Product;
         $product->name = $request->name;
-        $product->detail = $request->description;
+        $product->detail = $request->detail;
         $product->price = $request->price;
         $product->stock = $request->stock;
         $product->discount = $request->discount;
